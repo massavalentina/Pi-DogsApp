@@ -1,0 +1,22 @@
+body{
+    display: inline-block;
+    grid-gap: 10px;
+    padding: 40px;
+    width: 100%;
+}
+
+.container  {
+    position:relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 300px;
+    background: #dfdedea6;
+    overflow: hidden;
+    border-radius: 20px;
+
+  }
+
+  
+ 
