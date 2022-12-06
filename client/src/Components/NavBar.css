@@ -1,0 +1,46 @@
+
+.containerNav{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .logoTitle{
+    
+    padding: 1px;
+    font-size: 40px;
+    gap: 2px;
+    position: relative;
+    right: 20%;
+}
+
+
+.searchB{
+   margin-left: 75%;
+   padding: 0%;
+   justify-content: space-between;
+   
+} */
+
+.navBar{
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2pxpx ;
+    background-color:  rgb(235, 217, 204);
+}
+ 
+.title{
+    position: relative;
+    margin-right:69%;
+    font-size: 25px;
+  
+    color:white;
+    font-family:Pacifico;
+    
+}
+
+.searchBar{
+    margin-right: 0;
+}

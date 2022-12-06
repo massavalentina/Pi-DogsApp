@@ -1,4 +1,16 @@
 import axios from 'axios'
+export const GET_ALL_DOGS = "GET_ALL_DOGS"
+export const GET_TEMPERAMENTS= "GET_TEMPERAMENTS"
+export const GET_DOG_NAME= "GET_DOG_NAME"
+export const GET_DETAIL="GET_DETAIL"
+export const POST_DOG="POST_DOG"
+export const FILTER_BY_HEIGHT="FILTER_BY_HEIGHT"
+export const FILTER_BY_NAME="FILTER_BY_NAME"
+export const FILTER_BY_WEIGHT="FILTER_BY_WEIGHT"
+export const FILTER_BY_TEMPERAMENTS="FILTER_BY_TEMPERAMENTS"
+export const FILTER_CREATED_DOG="FILTER_CREATED_DOG"
+export const CLEAN_DETAIL="CLEAN_DETAIL"
+
 
 export function getAllDogs () {
     return async function (dispatch) {
@@ -14,7 +26,7 @@ export function getTemperaments() {
     return async function (dispatch) {
         var json = await axios.get('/temperaments')
         return dispatch({
-            type: "GET_ALL_TEMPERAMENTS",
+            type: "GET_TEMPERAMENTS",
             payload: json.data
         })
     }
@@ -34,12 +46,12 @@ export function getDogName(name) {
     }
 }
 
-export function getDog(id) {
+export function getDetail(id) {
     return async function (dispatch) {
         try {
             var json = await axios.get(`/dogs/${id}`);
             return dispatch({
-                type: "GET_DOG_DETAIL",
+                type: "GET_DETAIL",
                 payload: json.data
             })
         } catch(error) {
@@ -48,20 +60,17 @@ export function getDog(id) {
     }
 }
 
-export function postDog(payload) {
-    return async function(dispatch) {
-        try {
-            const response = await axios.post("/dogs", payload)
-            return {
-                type:"POST_DOG",
-                payload: response
-            }
+export function postDog (data){
+    try{
+        return async function () {
+            const posted = await axios.post('/dogs', data);
+            return posted
         }
-        catch(error) {
-            console.log(error)
-        }
+    } catch(error) {
+        return('The dog could not be created')
     }
-  }
+}
+
 
 export function filterByHeight(payload){
     return {
@@ -98,9 +107,9 @@ export function filterCreatedDog (payload) {
     }
 }
 
-export function clearDetail ()  {
+export function cleanDetail ()  {
     return {
-        type : "CLEAR_DETAIL"
+        type : "CLEAN_DETAIL"
     }
 }
 // export function deleteDog(id){

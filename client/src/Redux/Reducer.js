@@ -24,14 +24,14 @@
             };
             
 
-          case "GET_DOG_DETAIL":
+          case "GET_DETAIL":
             return {
               ...state,
               dogDetail: action.payload
               };
         
 
-          case "GET_ALL_TEMPERAMENTS":
+          case "GET_TEMPERAMENTS":
             return {
               ...state,
               temperaments: action.payload
@@ -91,12 +91,12 @@
           };
     
     
-          // case CLEAR_DETAIL : {
-          //   return {
-          //     ...state ,
-          //     dogDetail : {}
-          //   }
-          // };
+          case "CLEAN_DETAIL" : 
+            return {
+              ...state ,
+              dogDetail : {}
+            
+          };
     
 
           case "POST_DOG": 
@@ -104,11 +104,7 @@
               ...state
         };
 
-          // case DELETE_DOG:
-    //   return {
-    //     ...state,
-    //     dogs: state.dogs.filter(e => e.id !== action.payload)
-    //   }
+  
 
 
           default:

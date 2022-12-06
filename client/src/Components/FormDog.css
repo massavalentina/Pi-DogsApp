@@ -1,0 +1,299 @@
+
+.backgroundForm{
+  background-image: url(https://images.pexels.com/photos/5706430/pexels-photo-5706430.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-color: rgb(180, 229, 248);
+  margin: 0;
+  padding: 0;
+ height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+
+
+
+.itemForm {
+    color: white;
+    
+    list-style: none;
+    position: relative;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(245, 245, 245);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    background-color: rgba(152, 151, 151, 0.34);
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    
+  }
+
+  
+  .itemForm:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  .itemForm::before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  .itemForm:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+    
+  }
+
+.divForm{
+  border-radius: 5px;
+  background-image: linear-gradient(to top, rgba(180, 180, 179, 0.767) 0%, rgb(153, 153, 153) 100%);
+  box-shadow: 15px 15px 15px rgba(25, 26, 25, 0.644);
+  margin-left: 20%;
+  margin-right: 20%;
+  color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+h4{
+  margin-bottom: -5px;
+}
+
+
+
+.btnS{
+  /* button submit */
+    font-size:1.5rem;
+    background-color: rgb(230, 230, 230);
+    border: solid 1px;
+    border-color: rgb(136, 136, 136);
+    box-shadow: 5px 5px 15px rgb(126, 126, 126);
+    color: rgb(196, 196, 196);
+    border-radius: 5px;
+    margin: 15px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+.btnS:hover{
+  background-color: #efefef;
+  color: rgb(107, 107, 107);
+}
+
+a.danger {
+  
+    color: rgb(161, 10, 10);
+    font-size: 15px;
+    margin-top: 3px;
+    margin-bottom: 6px;
+    margin-left: 30px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+  }
+  
+
+
+.delete{
+  font-size: 1.2rem;
+  background-color: rgb(152, 17, 17);
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  border-radius: 4px;
+  border: solid 1.2px;
+  height: 25px;
+  width: 25px;
+}
+.delete:hover{
+  border-color: black;
+  background-color: #efefef;
+  color: rgb(109, 109, 109);
+}
+
+.temp{
+  width: 60x;
+  height: 30px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.btnT{
+  margin: 10px;
+  background-color: rgb(192, 192, 192);
+  box-shadow: 5px 5px 15px rgb(37, 19, 5);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+}
+
+
+.inputStyle{
+    
+    color: rgb(0, 0, 0);
+    list-style: none;
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 7px;
+    border: 1px solid rgb(245, 245, 245);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+  
+  
+}
+
+  .containerForm{
+    
+    padding: 3rem;
+    line-height: 45px;
+    font-size: 1.5rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+  }
+  
+  
+  
+  .divForm{
+    border-radius: 5px;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.418) 0%, rgba(160, 160, 160, 0.39) 100%);
+    padding-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+ 
+  
+  
+  
+  .btnS{
+    /* button submit */
+      font-size:1.5rem;
+      background-color: rgb(204, 204, 204);
+      border: solid 1px;
+      border-color: rgb(54, 37, 24);
+      box-shadow: 5px 5px 15px rgb(85, 85, 85);
+      color: rgb(109, 109, 109);
+      border-radius: 5px;
+      margin: 15px;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+  }
+ 
+  
+
+    
+  input.danger {
+    font-size: 1.2rem;
+     border: 2px solid rgb(116, 3, 3);;
+     font-family: 'Yanone Kaffeesatz', sans-serif;
+  }
+  
+  .delete{
+    font-size: 1.2rem;
+    background-color: rgb(152, 17, 17);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    border-radius: 4px;
+    border: solid 1.2px;
+    height: 25px;
+    width: 25px;
+  }
+  .delete:hover{
+    border-color: black;
+    background-color: #efefef;
+    color: rgb(129, 129, 129);
+  }
+  
+  .temp{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 15px;
+  }
+  
+  .btnT{
+    margin: 10px;
+    background-color: rgb(179, 179, 179);
+    box-shadow: 5px 5px 15px rgb(114, 114, 114);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+  }
+  .inputStyle{
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+  }
+  
+.containernavForm{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.navbarForm{
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  text-align: center;
+  padding: 2pxpx ;
+  background-color:  rgb(235, 217, 204);
+}
+
+.titleForm{
+  position: relative;
+  margin-right:90%;
+  font-size: 25px;
+
+  color:white;
+  font-family:Pacifico;
+  
+}
+

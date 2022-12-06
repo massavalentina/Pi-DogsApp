@@ -4,8 +4,10 @@ import {useDispatch, useSelector} from 'react-redux';
 import { getAllDogs, getTemperaments, filterCreatedDog, filterByTemperament, filterByName, filterByWeight } from "../Redux/Actions";
 import Card from "./Card";
 import Paginate from './Paginate'
-import style from './Home.css'
 import SearchBar from './SearchBar';
+import Footer from './Footer';
+import Navbar from './Navbar';
+import './Home.css'
 
 
 export default function Home () {
@@ -58,92 +60,103 @@ export default function Home () {
     }
 
     return (
-        <body>
-            
-        
-<div className = {style.background}>
-    <header>
-        <div className={style.arreglar}>
-            <Link to="/">
-                <button className='item'>Dogpedia</button> 
-            </Link>
-        </div>
-    <div className={style.headerContainerLeft}>  
-             <div className = {style.arreglo}>
-                    <button  className='item' onClick={e =>{handleClick(e)}}> Get dogs again</button>
-                    <Link to='/create'>
-                        <button className='item'>Create Dog</button>
+        <div>
+              <div>
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+                <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Pacifico&display=swap" rel="stylesheet"/>
+                </div>
+            <Navbar>
+                <div >
+                    <Link to="/">
+                        <button className='itemHome'>Dogpedia</button> 
                     </Link>
-             </div>
-        <div className={style.headerLeft}>
-            <SearchBar paginado={paginado}/>
-            <div className={style.containerFilters}>
-                <select className='item'
-                    onChange={e => handlerFilterName(e)}>
-                    <option disabled selected defaultValue>
-                        Order by name
-                    </option>
-                    <option key={1} value='A-Z'>A-Z</option>
-                    <option key={2} value='Z-A'>Z-A</option>
-                </select>
-
-                <select className='item'
-                    onChange={e => handlerFilterWeight(e)}>
-                    <option disabled selected defaultValue>
-                        Order by wieght
-                    </option>
-                    <option key={1} value="max_weight">Max</option>
-                    <option key={2} value="min_weight">Min</option>
-                </select>
-
-                <select className='item'
-                    onChange={e => handlerFilterCreated(e)}>
-                    <option disable selected defaultValue> 
-                        Order by created
-                    </option>
-                    <option key={1} value='all'>All</option>
-                    <option key={2} value='created'>Created</option>
-                    <option key={3} value='api'>Api</option>
-                </select>
-
-
-                <select className='item'
-                    onChange={e => handlerFilterTemperament(e)}>
-                    <option disabled selected defaultValue>Temperaments</option>
-                    <option key={1+'e'} value='All'>All</option>
-                    {
-                        allTemperaments.map(temp => (
-                            <option value={temp.name} key={temp.id}>{temp.name}</option>
-                        ))
-                    }
-                </select>
+                
+                </div>
+            </Navbar>
+            <div className='backgroundHome' >
+        
+            <header>
+      
+             <div>
+                    <button  className='itemHome' onClick={e =>{handleClick(e)}}>Get dogs again</button>
+                    <Link to='/create'>
+                    <button className='itemHome'>Create Dog</button>
+                    </Link>
             </div>
-        </div>
-    </div>
-           
-        </header>    
+        
+            <div>
+                <div>
+                    <div>
+                        {/* FILTRO POR NOMBRE (A-Z,Z-A) */}
+                        <select className='itemHome'
+                            onChange={e => handlerFilterName(e)}>
+                            <option disabled selected defaultValue>Order by name</option>
+                            <option key={1} value='A-Z'>A-Z</option>
+                            <option key={2} value='Z-A'>Z-A</option>
+                        </select>
+
+
+                        {/* FILTRO POR PESO (MAX-MIN) */}
+                        <select className='itemHome'
+                            onChange={e => handlerFilterWeight(e)}>
+                            <option disabled selected defaultValue>Order by weight</option>
+                            <option key={1} value="max_weight">Max</option>
+                            <option key={2} value="min_weight">Min</option>
+                        </select>
+
+                            {/* FILTRO POR ORIGEN  */}
+                        <select className='itemHome'
+                            onChange={e => handlerFilterCreated(e)}>
+                            <option disable selected defaultValue>Order by created</option>
+                            <option key={1} value='all'>All</option>
+                            <option key={2} value='created'>Created</option>
+                            <option key={3} value='api'>Api</option>
+                        </select>
+
+                            {/* FILTRO TEMPERAMENTOS */}
+                        <select className='itemHome'
+                            onChange={e => handlerFilterTemperament(e)}>
+                            <option disabled selected defaultValue>Temperaments</option>
+                            <option key={1+'e'} value='All'>All</option>
+                            {
+                                allTemperaments.map(temp => (
+                                    <option value={temp.name} key={temp.id}>{temp.name}</option>
+                                ))
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
             
-    <Paginate dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado}/>
-            
-         <div>  
-            
+            </header>    
+        
+
+        <Paginate dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado}/>
+                
+            <div>  
                 {Object.keys(allDogs).length ? 
                     <div className='cards' >  
-                    {
-                    currentDogs?.map((el) => {
-                        return(
-                            <div key={el.id}>
-                            {
-                                <Card key={el.id} id={el.id} image={el.image} name={el.name} temperament={el.temperament}  weight_min={el.weight_min} weight_max={el.weight_max}/>
-                            }
+                        {
+                        currentDogs?.map((el) => {
+                            return(
+                                <div key={el.id}>
+                                {
+                                    <Card key={el.id} id={el.id} image={el.image} name={el.name} temperament={el.temperament}  weight_min={el.weight_min} weight_max={el.weight_max}/>
+                                }
+                                </div>
+                                
+                                )
+                            })}
+                            <div>
+                                <Footer/>
                             </div>
-                            )
-                        })}
-            </div> :
-                    <div>
-                        <h1>LOADING...</h1>
-                    </div>}
-        </div>
-</div>
-</body>
+                    </div> :
+                        <div>
+                            <span className='loading'>Loading...</span>
+                        </div>}
+            </div>
+            </div>
+            </div>
+        
 )}

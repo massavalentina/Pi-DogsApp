@@ -35,6 +35,8 @@ const getById = async (req, res) => {
     }
 };
 
+
+
 const postDogs = async (req,res) => {
     // try{
         let {
@@ -71,5 +73,16 @@ const postDogs = async (req,res) => {
             return res.status(200).send('The dog was created')
         }
     }
+
+    // const deleteDogs = async (req, res) => {
+    //     const {id} = req.params;
+    //     try {
+    //       if (id) {
+    //         res.status(200).send("Pokemon deleted succefully")
+    //       }
+    //     } catch (error) {
+    //       res.status(404).json(error)
+    //     }
+    //   });
 
 module.exports = {getDogs, getById, postDogs};  

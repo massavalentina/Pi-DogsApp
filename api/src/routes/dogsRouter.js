@@ -10,5 +10,6 @@ const dogsRouter = Router()
 dogsRouter.get('/', getDogs);
 dogsRouter.get('/:idRaza', getById);
 dogsRouter.post('/', postDogs);
+// dogsRouter.delete("/", deleteDogs);
 
 module.exports = dogsRouter;

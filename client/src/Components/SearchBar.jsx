@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { getDogName } from '../Redux/Actions'
 import { useHistory } from "react-router-dom";
-import style from './SearchBar.css'
+
 
 export default function SearchBar ({paginado}) {
     const dispatch = useDispatch();
@@ -25,11 +25,11 @@ export default function SearchBar ({paginado}) {
     }
 
     return (
-        <div >
+        <span >
             <form>
                 <input className='item' type="text" onChange={e => handleInput(e)} value={searchDog} placeholder="Search..."/>
                 <button className='item' type="submit" onClick={e => handleSubmit(e)}>Look for</button>
             </form>
-        </div>
+        </span>
     )
 }
