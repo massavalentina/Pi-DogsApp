@@ -11,13 +11,13 @@ const getDogs = async (req,res) => {
             if (dogSelected.length){
                 return res.status(200).send(dogSelected)
             } else {
-                return res.status(404).send({error: 'The dog is at the park'})
+                return res.status(404).send({error: 'Dog not found'})
             }
         } else {
             return res.status(201).json(allDogs)
         } 
     } catch(error){
-        res.status(404).send({error: 'The dog is at the park'})
+        res.status(404).send({error: 'Dog not foud'})
     }
 };
 
@@ -34,8 +34,6 @@ const getById = async (req, res) => {
         return res.status(404).send({error: 'The dog is at the park'})
     }
 };
-
-
 
 const postDogs = async (req,res) => {
     // try{
@@ -74,15 +72,17 @@ const postDogs = async (req,res) => {
         }
     }
 
+     
     // const deleteDogs = async (req, res) => {
     //     const {id} = req.params;
     //     try {
     //       if (id) {
-    //         res.status(200).send("Pokemon deleted succefully")
+    //         res.status(200).send("Dog eliminated")
     //       }
     //     } catch (error) {
     //       res.status(404).json(error)
     //     }
-    //   });
+    //   };
 
-module.exports = {getDogs, getById, postDogs};  
+module.exports = {getDogs, getById, postDogs, };  
+// deleteDogs

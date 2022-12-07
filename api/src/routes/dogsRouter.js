@@ -1,8 +1,9 @@
 const {Router} = require("express")
 const { getById,
         getDogs,
-        postDogs} = require('../controllers/dogsControllers')
-
+        postDogs,
+        } = require('../controllers/dogsControllers')
+// deleteDogs
 
 
 const dogsRouter = Router()
@@ -10,6 +11,6 @@ const dogsRouter = Router()
 dogsRouter.get('/', getDogs);
 dogsRouter.get('/:idRaza', getById);
 dogsRouter.post('/', postDogs);
-// dogsRouter.delete("/", deleteDogs);
+// dogsRouter.delete("/:id", deleteDogs);
 
 module.exports = dogsRouter;

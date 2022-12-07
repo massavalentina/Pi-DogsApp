@@ -1,5 +1,6 @@
 import './App.css';
 import { Route, Switch, BrowserRouter} from "react-router-dom";
+import Page404 from './Components/Page404';
 import LandingPage from './Components/LandingPage'
 import Home from './Components/Home';
 import Detail from './Components/Detail.jsx'
@@ -16,6 +17,7 @@ function App() {
         <Route exact path='/home' component={Home}/>
         <Route exact path='/home/:id' component={Detail}/>
         <Route exact path='/create' component={FormDog}/> 
+        <Route path="*" component = {Page404}></Route>
        
 
         </Switch>

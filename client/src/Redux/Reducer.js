@@ -104,7 +104,11 @@
               ...state
         };
 
-  
+          // case "DELETE_DOG":
+          //   return{
+          //     ...state,
+              
+          //   }
 
 
           default:

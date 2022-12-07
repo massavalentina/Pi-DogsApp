@@ -23,7 +23,7 @@ export default function Detail(props) {
 
             <head>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Pacifico&display=swap" rel="stylesheet"/>
             </head>
      
@@ -53,7 +53,7 @@ export default function Detail(props) {
             {Object.keys(dog).length ? 
             <div className="contDetail">
                 <div className="itemDetail">
-                    <img src={dog[0].image ? dog[0].image : dog[0].image = "https://www.nextdayflyers.com/blog/wp-content/uploads/2014/10/Pet-Flyer-1-768x1024.jpg"} alt="woof" width="400" height="400" />
+                    <img src={dog[0].image ? dog[0].image : dog[0].image = "https://i.pinimg.com/564x/c8/95/cb/c895cbcb780afd24022e1befd36bbe73.jpg"} alt="woof" width="400" height="400" />
             
             
                     <h2> Name : {dog[0].name}</h2>

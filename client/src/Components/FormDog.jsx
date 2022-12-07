@@ -90,7 +90,7 @@ import validate from './FormValidate'
         <div className="backgroundForm">
             <div>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+                <link rel="preconnect" href="https://fonts.gstatic.com"/>
                 <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Pacifico&display=swap" rel="stylesheet"/>
             </div>
           
@@ -160,7 +160,7 @@ import validate from './FormValidate'
 
 
             <div>
-                <label>Temperaments  </label>
+                <label>Temperaments </label>
                     <select  onChange={handleSelect} className='inputStyle'>
                         {t && t.map((t) => (
                             <option key={t.id} value={t.name}>{t.name}</option>
