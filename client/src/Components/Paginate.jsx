@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Paginate.css"
+import './Paginate.css'
 
 export default function Paginate({ dogsPerPage, allDogs, paginado }) {
     const pageNumbers =[];
@@ -13,11 +13,10 @@ export default function Paginate({ dogsPerPage, allDogs, paginado }) {
             <ul className='listPag' >
                 {pageNumbers?.map((number) => {
                     return(<li className= 'item' key={number}>
-                         <a  onClick={() => paginado(number)}>{number}</a> 
+                         <div  onClick={() => paginado(number)}>{number}</div> 
                     </li>)
                 })}
             </ul>
         </div>
     )
 };
-

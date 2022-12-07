@@ -4,11 +4,10 @@ import {useDispatch, useSelector} from 'react-redux';
 import { getAllDogs, getTemperaments, filterCreatedDog, filterByTemperament, filterByName, filterByWeight } from "../Redux/Actions";
 import Card from "./Card";
 import Paginate from './Paginate'
-import SearchBar from './SearchBar';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import './Home.css'
-import Page404 from './Page404';
+
 
 
 export default function Home () {
@@ -102,7 +101,7 @@ export default function Home () {
                         {/* FILTRO POR NOMBRE (A-Z,Z-A) */}
                         <select defaultValue = "Order by name" className='itemHome'
                             onChange={e => handlerFilterName(e)}>
-                           {/* <option disabled selected defaultValue>Order by name</option> */}
+                           <option disabled selected defaultValue>Order by name</option>
                             <option key={1} value='A-Z'>A-Z</option>
                             <option key={2} value='Z-A'>Z-A</option>
                         </select>
@@ -111,7 +110,7 @@ export default function Home () {
                         {/* FILTRO POR PESO (MAX-MIN) */}
                         <select defaultValue = "Order by weight" className='itemHome'
                             onChange={e => handlerFilterWeight(e)}>
-                            {/* <option disabled selected defaultValue>Order by weight</option> */}
+                            <option disabled selected defaultValue>Order by weight</option>
                             <option key={1} value="max_weight">Max</option>
                             <option key={2} value="min_weight">Min</option>
                         </select>
@@ -119,7 +118,7 @@ export default function Home () {
                             {/* FILTRO POR ORIGEN  */}
                         <select defaultValue = "Order by created" className='itemHome'
                             onChange={e => handlerFilterCreated(e)}>
-                            {/* <option disable selected defaultValue>Order by created</option> */}
+                            <option disable selected defaultValue>Order by created</option>
                             <option key={1} value='all'>All</option>
                             <option key={2} value='created'>Created</option>
                             <option key={3} value='api'>Api</option>
@@ -128,7 +127,7 @@ export default function Home () {
                             {/* FILTRO TEMPERAMENTOS */}
                         <select defaultValue = "Temperaments" className='itemHome'
                             onChange={e => handlerFilterTemperament(e)}>
-                            {/* <option disabled selected defaultValue>Temperaments</option> */}
+                            <option disabled selected defaultValue>Temperaments</option>
                             <option key={1+'e'} value='All'>All</option>
                             {
                                 allTemperaments.map(temp => (

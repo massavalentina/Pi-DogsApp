@@ -31,7 +31,7 @@ const getById = async (req, res) => {
                 return res.status(200).send(dogSelected)
             } 
     } catch (error) {
-        return res.status(404).send({error: 'The dog is at the park'})
+        return res.status(404).send({error: 'Dog not found'})
     }
 };
 

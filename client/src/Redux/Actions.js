@@ -1,5 +1,5 @@
 import axios from 'axios'
-import Page404 from '../Components/Page404'
+
 export const GET_ALL_DOGS = "GET_ALL_DOGS"
 export const GET_TEMPERAMENTS= "GET_TEMPERAMENTS"
 export const GET_DOG_NAME= "GET_DOG_NAME"
@@ -11,7 +11,7 @@ export const FILTER_BY_WEIGHT="FILTER_BY_WEIGHT"
 export const FILTER_BY_TEMPERAMENTS="FILTER_BY_TEMPERAMENTS"
 export const FILTER_CREATED_DOG="FILTER_CREATED_DOG"
 export const CLEAN_DETAIL="CLEAN_DETAIL"
-export const DELETE_DOG= "DELETE_DOG"
+
 
 
 
@@ -44,7 +44,7 @@ export function getDogName(name) {
                 payload: json.data
             })
         } catch(error){
-            return 
+            console.log(error)
         }
     }
 }
@@ -70,7 +70,7 @@ export function postDog (data){
             return posted
         }
     } catch(error) {
-        return('The dog could not be created')
+        console.log(error)
     }
 }
 

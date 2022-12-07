@@ -104,16 +104,38 @@
               ...state
         };
 
-          // case "DELETE_DOG":
-          //   return{
-          //     ...state,
-              
-          //   }
-
+         
 
           default:
             return state;
       }
     };
       
-      export default rootReducer;
+      export default rootReducer; 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      // case "DELETE_DOG":
+          //   return{
+          //     ...state,
+              
+          //   }

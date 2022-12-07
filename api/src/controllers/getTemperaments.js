@@ -2,7 +2,7 @@ const axios = require('axios');
 const { Temperament} = require('../db')
 
 
-const getTemperaments = async (req,res) => {
+const getTemperaments = async (req, res) => {
     try {
            const api = await axios.get('https://api.thedogapi.com/v1/breeds')
            const perros = await api.data.map (el => el.temperament)
@@ -16,7 +16,7 @@ const getTemperaments = async (req,res) => {
                }
            })
            const allTemperament = await Temperament.findAll()
-           // console.log(allTemperament)
+          
            return res.status(200).json(allTemperament)
        }catch (error){
             res.status(404).send({error: 'There are not temperaments'})
