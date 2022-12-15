@@ -37,7 +37,7 @@ module.exports = (sequelize) => {
     },
     lifeTime: {
       type: DataTypes.INTEGER
-},
+    },
 
   image : {
     type :DataTypes.STRING,

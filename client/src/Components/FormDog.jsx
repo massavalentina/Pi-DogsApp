@@ -60,8 +60,9 @@ import validate from './FormValidate'
         const handleSubmit = (e) =>{
             e.preventDefault()
             console.log(input)
-            dispatch(postDog(input))
-    
+
+            dispatch(postDog(input)) 
+ 
             alert("The dog was created")
             setInput({
                 name: "",
@@ -70,8 +71,7 @@ import validate from './FormValidate'
                 weight_min: 0,
                 weight_max: 0,
                 lifeTime: 0,
-                temperament: [],
-               
+                temperament: [], 
             })
             history.push('/home')
         }
