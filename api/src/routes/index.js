@@ -15,25 +15,3 @@ mainRouter.use('/temperaments', temperamentsRouter);
 
 
 module.exports = mainRouter;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// https://github.com/Frannmoreno/PI-Dogs/blob/main/api/src/Controllers/Controllers.js#L5
